@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+/* Side Navigation */
+.side-nav {
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.live-status {
+  margin-bottom: 30px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
   color: white;
+  text-align: center;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.status-safe {
+  background-color: #28a745; /* Green for Safe */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status-emergency {
+  background-color: #dc3545; /* Red for Emergency */
+}
+
+.side-nav ul {
+  list-style: none;
+}
+
+.side-nav li {
+  margin-bottom: 15px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.nav-link i {
+  margin-right: 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #e9ecef;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: #dc3545;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.logout-button i {
+  margin-right: 10px;
+}
+
+.logout-button:hover {
+  background-color: #f8d7da;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 250px;
+  padding: 30px;
+  flex: 1;
+}
+
+/* Card Styles (Used Across Components) */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
 }
